@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4205D307238F2E3A001C34AA /* SearchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4205D306238F2E3A001C34AA /* SearchScreen.storyboard */; };
+		4205D309238F2E51001C34AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205D308238F2E51001C34AA /* SearchViewController.swift */; };
 		4226AEEE238D142100593D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AEED238D142100593D6D /* AppDelegate.swift */; };
 		4226AEF0238D142100593D6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AEEF238D142100593D6D /* SceneDelegate.swift */; };
 		4226AEF2238D142100593D6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AEF1238D142100593D6D /* ViewController.swift */; };
 		4226AEF7238D142300593D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4226AEF6238D142300593D6D /* Assets.xcassets */; };
 		4226AEFA238D142300593D6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226AEF8238D142300593D6D /* LaunchScreen.storyboard */; };
-		4226AF06238D18B200593D6D /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF05238D18B200593D6D /* TabbarController.swift */; };
 		4226AF08238D192400593D6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226AF07238D192400593D6D /* Main.storyboard */; };
 		4226AF0E238D1D1200593D6D /* MoreScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226AF0D238D1D1200593D6D /* MoreScreen.storyboard */; };
 		4226AF10238D1D1B00593D6D /* AllScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4226AF0F238D1D1B00593D6D /* AllScreen.storyboard */; };
@@ -22,9 +23,13 @@
 		4226AF18238D24B100593D6D /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF17238D24B100593D6D /* AllViewController.swift */; };
 		4226AF1A238D24BA00593D6D /* CloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF19238D24BA00593D6D /* CloudViewController.swift */; };
 		4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF1B238D24C300593D6D /* LocalViewController.swift */; };
+		42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AABFB9238F126000F33FF2 /* TabbarController.swift */; };
+		42AABFBF238F1B3A00F33FF2 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AABFBE238F1B3A00F33FF2 /* Tabbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4205D306238F2E3A001C34AA /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
+		4205D308238F2E51001C34AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4226AEEA238D142100593D6D /* Memery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4226AEED238D142100593D6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4226AEEF238D142100593D6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +37,6 @@
 		4226AEF6238D142300593D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4226AEF9238D142300593D6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4226AEFB238D142300593D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4226AF05238D18B200593D6D /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		4226AF07238D192400593D6D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4226AF0D238D1D1200593D6D /* MoreScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreScreen.storyboard; sourceTree = "<group>"; };
 		4226AF0F238D1D1B00593D6D /* AllScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		4226AF17238D24B100593D6D /* AllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 		4226AF19238D24BA00593D6D /* CloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewController.swift; sourceTree = "<group>"; };
 		4226AF1B238D24C300593D6D /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		42AABFB9238F126000F33FF2 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		42AABFBE238F1B3A00F33FF2 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4205D305238F2E22001C34AA /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4205D306238F2E3A001C34AA /* SearchScreen.storyboard */,
+				4205D308238F2E51001C34AA /* SearchViewController.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
 		4226AEE1238D142100593D6D = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +89,7 @@
 		4226AEEC238D142100593D6D /* Memery */ = {
 			isa = PBXGroup;
 			children = (
+				42AABFB8238F123600F33FF2 /* CustomUI */,
 				4226AF03238D185800593D6D /* Controller */,
 				4226AF02238D185200593D6D /* View */,
 				4226AF01238D184700593D6D /* Model */,
@@ -104,6 +120,7 @@
 		4226AF03238D185800593D6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4205D305238F2E22001C34AA /* SearchScreen */,
 				4226AF0C238D1CF200593D6D /* MoreScreen */,
 				4226AF0B238D1CEA00593D6D /* AllScreen */,
 				4226AF0A238D1CE200593D6D /* CloudScreen */,
@@ -116,7 +133,7 @@
 		4226AF04238D186800593D6D /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				4226AF05238D18B200593D6D /* TabbarController.swift */,
+				42AABFB9238F126000F33FF2 /* TabbarController.swift */,
 				4226AF07238D192400593D6D /* Main.storyboard */,
 			);
 			path = Tabbar;
@@ -156,6 +173,14 @@
 				4226AF15238D24A300593D6D /* MoreViewController.swift */,
 			);
 			path = MoreScreen;
+			sourceTree = "<group>";
+		};
+		42AABFB8238F123600F33FF2 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				42AABFBE238F1B3A00F33FF2 /* Tabbar.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +245,7 @@
 				4226AF08238D192400593D6D /* Main.storyboard in Resources */,
 				4226AEFA238D142300593D6D /* LaunchScreen.storyboard in Resources */,
 				4226AEF7238D142300593D6D /* Assets.xcassets in Resources */,
+				4205D307238F2E3A001C34AA /* SearchScreen.storyboard in Resources */,
 				4226AF0E238D1D1200593D6D /* MoreScreen.storyboard in Resources */,
 				4226AF10238D1D1B00593D6D /* AllScreen.storyboard in Resources */,
 				4226AF12238D1D2500593D6D /* CloudScreen.storyboard in Resources */,
@@ -233,11 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4205D309238F2E51001C34AA /* SearchViewController.swift in Sources */,
 				4226AF18238D24B100593D6D /* AllViewController.swift in Sources */,
 				4226AF1A238D24BA00593D6D /* CloudViewController.swift in Sources */,
 				4226AF16238D24A300593D6D /* MoreViewController.swift in Sources */,
+				42AABFBF238F1B3A00F33FF2 /* Tabbar.swift in Sources */,
+				42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */,
 				4226AEF2238D142100593D6D /* ViewController.swift in Sources */,
-				4226AF06238D18B200593D6D /* TabbarController.swift in Sources */,
 				4226AEEE238D142100593D6D /* AppDelegate.swift in Sources */,
 				4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */,
 				4226AEF0238D142100593D6D /* SceneDelegate.swift in Sources */,
