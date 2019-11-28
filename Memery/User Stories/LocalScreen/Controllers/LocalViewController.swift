@@ -54,8 +54,15 @@ extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width / 2 - 10, height: view.frame.width / 2 - 4)
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        layout.minimumInteritemSpacing = 03
+        layout.minimumLineSpacing = 03
+        layout.invalidateLayout()
+
+        return CGSize(width: ((self.view.frame.width / 2 ) - 10), height:((self.view.frame.width / 2) + 11));
     }
 }
