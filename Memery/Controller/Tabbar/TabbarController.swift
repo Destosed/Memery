@@ -6,16 +6,10 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
 
         self.delegate = self
-        initControllers()
+        
+        setupControllers()
         setupTabbar()
         setupMiddleButton()
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController.isKind(of: SearchViewController.self) {
-            return false
-        }
-        return true
     }
     
     //MARK: - Setups
@@ -33,10 +27,9 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         middleBtn.adjustsImageWhenHighlighted = false
         middleBtn.layer.cornerRadius = middleBtn.frame.height / 2
         middleBtn.tintColor = .white
-        
-        self.tabBar.addSubview(middleBtn)
         middleBtn.addTarget(self, action: #selector(self.menuButtonAction), for: .touchUpInside)
 
+        self.tabBar.addSubview(middleBtn)
         self.view.layoutIfNeeded()
     }
 
@@ -47,7 +40,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         self.present(searchVC, animated: true, completion: nil)
     }
     
-    func initControllers() {
+    func setupControllers() {
         
         let localScreenStoryboard = UIStoryboard(name: "LocalScreen", bundle: nil)
         let localVC = localScreenStoryboard.instantiateInitialViewController() as! LocalViewController
@@ -59,10 +52,10 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         let cloudTabbarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "outline_cloud_white_48pt"), selectedImage: nil)
         cloudVC.tabBarItem = cloudTabbarItem
         
-        let searchScreenStoryboard = UIStoryboard(name: "SearchScreen", bundle: nil)
-        let searchVC = searchScreenStoryboard.instantiateInitialViewController() as! SearchViewController
+        let searchVC = SearchViewController()
         let searchTabbarItem = UITabBarItem(title: "", image: nil, selectedImage: nil)
         searchVC.tabBarItem = searchTabbarItem
+        searchVC.tabBarItem.isEnabled = false
         
         let allScreenStoryboard = UIStoryboard(name: "AllScreen", bundle: nil)
         let allVC = allScreenStoryboard.instantiateInitialViewController() as! AllViewController
