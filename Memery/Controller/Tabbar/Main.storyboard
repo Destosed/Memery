@@ -10,7 +10,7 @@
         <scene sceneID="Pct-q1-aO2">
             <objects>
                 <tabBarController id="Ree-Xc-E83" customClass="TabbarController" customModule="Memery" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZQ-xG-JMG" customClass="JBTabBar" customModule="Memery" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZQ-xG-JMG" customClass="MyTabBar" customModule="Memery" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
