@@ -18,12 +18,6 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
         return true
     }
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        
-    }
-    
-    
-    
     //MARK: - Setups
     
     func setupTabbar() {
@@ -47,7 +41,10 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     }
 
     @objc func menuButtonAction(sender: UIButton) {
-        self.selectedIndex = 2
+        
+        let searchScreenStoryboard = UIStoryboard(name: "SearchScreen", bundle: nil)
+        let searchVC = searchScreenStoryboard.instantiateInitialViewController() as! SearchViewController
+        self.present(searchVC, animated: true, completion: nil)
     }
     
     func initControllers() {
