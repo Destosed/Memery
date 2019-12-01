@@ -4,6 +4,7 @@ class AlbumViewController: UIViewController {
     
     //MARK: - Preperties
     
+    private let showImageSegueIdentifier = "showImageSegue"
     private let imageCellIdentifier = "AlbumCell"
     var album: Album!
     var images: [Image] = []
@@ -26,6 +27,14 @@ class AlbumViewController: UIViewController {
         setupCollectionView()
         title = album.name
         images = album.image?.allObjects as! [Image]
+    }
+    
+    //MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let imageVC = segue.destination as? ImageViewController else { return }
+        imageVC.image = sender as? Image
     }
 }
 
@@ -63,5 +72,9 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
         layout.invalidateLayout()
 
         return CGSize(width: ((self.view.frame.width / 3) - 4), height:((self.view.frame.width / 3) - 4));
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: showImageSegueIdentifier, sender: images[indexPath.row])
     }
 }

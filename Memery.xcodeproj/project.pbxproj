@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		4226AF1A238D24BA00593D6D /* CloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF19238D24BA00593D6D /* CloudViewController.swift */; };
 		4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF1B238D24C300593D6D /* LocalViewController.swift */; };
 		423BB378238FDEE700533865 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BB377238FDEE700533865 /* MyTabBar.swift */; };
+		4258B6C523947299003E1599 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4258B6C423947299003E1599 /* ImageViewController.swift */; };
 		425A82D423946EB600AA5BB7 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82CE23946EB600AA5BB7 /* Image+CoreDataClass.swift */; };
 		425A82D523946EB600AA5BB7 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82CF23946EB600AA5BB7 /* Image+CoreDataProperties.swift */; };
 		425A82D623946EB600AA5BB7 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82D023946EB600AA5BB7 /* Tag+CoreDataClass.swift */; };
@@ -40,9 +41,11 @@
 		42AB6FB1239429A800207A3B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FAF239429A800207A3B /* ImageCell.swift */; };
 		42AB6FB2239429A800207A3B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AB6FB0239429A800207A3B /* ImageCell.xib */; };
 		42AB6FBE2394609500207A3B /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FBD2394609500207A3B /* AlertService.swift */; };
+		5C35128D406E86CDD1CACBF5 /* Pods_Memery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17CD8ACDADE4D32DDA5F1C1D /* Pods-Memery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memery.debug.xcconfig"; path = "Target Support Files/Pods-Memery/Pods-Memery.debug.xcconfig"; sourceTree = "<group>"; };
 		4205D306238F2E3A001C34AA /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
 		4205D308238F2E51001C34AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4226AEEA238D142100593D6D /* Memery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +65,7 @@
 		4226AF19238D24BA00593D6D /* CloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewController.swift; sourceTree = "<group>"; };
 		4226AF1B238D24C300593D6D /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		423BB377238FDEE700533865 /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		4258B6C423947299003E1599 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		425A82CE23946EB600AA5BB7 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		425A82CF23946EB600AA5BB7 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		425A82D023946EB600AA5BB7 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		42AB6FAF239429A800207A3B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		42AB6FB0239429A800207A3B /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		42AB6FBD2394609500207A3B /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B27902BC87E8DF0DD4349AE /* Pods-Memery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memery.release.xcconfig"; path = "Target Support Files/Pods-Memery/Pods-Memery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C35128D406E86CDD1CACBF5 /* Pods_Memery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		386FED804654FA93CBFB0E97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17CD8ACDADE4D32DDA5F1C1D /* Pods-Memery.debug.xcconfig */,
+				9B27902BC87E8DF0DD4349AE /* Pods-Memery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4205D305238F2E22001C34AA /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +121,8 @@
 			children = (
 				4226AEEC238D142100593D6D /* Memery */,
 				4226AEEB238D142100593D6D /* Products */,
+				386FED804654FA93CBFB0E97 /* Pods */,
+				766D932252C898D10C9C76AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,8 +282,17 @@
 			children = (
 				4226AF1B238D24C300593D6D /* LocalViewController.swift */,
 				42AB6FAD239427B000207A3B /* AlbumViewController.swift */,
+				4258B6C423947299003E1599 /* ImageViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		766D932252C898D10C9C76AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4226AEFE238D142300593D6D /* Build configuration list for PBXNativeTarget "Memery" */;
 			buildPhases = (
+				FB9F0E768E56F975702E73E2 /* [CP] Check Pods Manifest.lock */,
 				4226AEE6238D142100593D6D /* Sources */,
 				4226AEE7238D142100593D6D /* Frameworks */,
 				4226AEE8238D142100593D6D /* Resources */,
+				3A598EFC35BA0E09612D04BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +370,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A598EFC35BA0E09612D04BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Memery/Pods-Memery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Memery/Pods-Memery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Memery/Pods-Memery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB9F0E768E56F975702E73E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Memery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4226AEE6238D142100593D6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,6 +439,7 @@
 				425A82D523946EB600AA5BB7 /* Image+CoreDataProperties.swift in Sources */,
 				423BB378238FDEE700533865 /* MyTabBar.swift in Sources */,
 				4226AEF0238D142100593D6D /* SceneDelegate.swift in Sources */,
+				4258B6C523947299003E1599 /* ImageViewController.swift in Sources */,
 				428351462390164600F42E7F /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +574,7 @@
 		};
 		4226AEFF238D142300593D6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17CD8ACDADE4D32DDA5F1C1D /* Pods-Memery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +593,7 @@
 		};
 		4226AF00238D142300593D6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B27902BC87E8DF0DD4349AE /* Pods-Memery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
