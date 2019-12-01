@@ -2,7 +2,7 @@
 //  Album+CoreDataClass.swift
 //  Memery
 //
-//  Created by Никита Лужбин on 01.12.2019.
+//  Created by Никита Лужбин on 02.12.2019.
 //  Copyright © 2019 Никита. All rights reserved.
 //
 //
@@ -12,4 +12,5 @@ import CoreData
 
 @objc(Album)
 public class Album: NSManagedObject {
+
 }

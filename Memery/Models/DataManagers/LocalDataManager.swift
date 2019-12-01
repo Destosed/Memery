@@ -36,11 +36,8 @@ class LocalDataManager {
     }
     
     func deleteAlbum(album: Album) {
-//        if let _ = album.image {
-//            album.removeFromImage(album.image!)
-//        }
         context.delete(album)
-        try! context.save()
+        try? context.save()
     }
     
     //MARK: - Image
@@ -54,7 +51,6 @@ class LocalDataManager {
         let imageToAdd = Image(context: context)
         imageToAdd.imageData = image.pngData()
         album.addToImage(imageToAdd)
-        //imageToAdd.album = album
         saveContext()
         
         return imageToAdd

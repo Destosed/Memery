@@ -16,10 +16,7 @@ class AlertService {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete Album", style: .destructive) { _ in
-            
-            print("1 _ Current amount of albums = \(LocalDataManager.shared.getAllAlbums().count)")
             LocalDataManager.shared.deleteAlbum(album: album)
-            print("2 _ Current amount of albums = \(LocalDataManager.shared.getAllAlbums().count)")
             vc.navigationController?.popViewController(animated: true)
         }
         alertController.addAction(cancelAction)
