@@ -14,6 +14,21 @@ class LocalViewController: UIViewController {
     
     @IBAction func addAlbumButtonPressed(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Add album", message: nil, preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Type album's name..."
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { alertAction in
+            
+            guard let albumName = alert.textFields?.first?.text else { return }
+            let newAlbum = LocalDataManager.shared.addAlbum(name: albumName)
+            self.albums.append(newAlbum)
+            self.collectionView.reloadData()
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     //MARK: - Life Circle
@@ -22,15 +37,27 @@ class LocalViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        fetchData()
+    }
+    
+    //MARK: - DataWorkers
+    
+    func fetchData() {
         
-        var als: [Album] = []
-        als.append(Album(name: "Test1"))
-        als.append(Album(name: "JoJo", image: UIImage(named: "jojo")!))
-        als.append(Album(name: "Test3", image: UIImage(named: "papug")!))
-        albums = als
+        self.albums = LocalDataManager.shared.getAllAlbums()
         collectionView.reloadData()
     }
+    
+    //MARK: - Segue stack
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let albumVC = segue.destination as? AlbumViewController else { return }
+        albumVC.album = sender as? Album
+    }
 }
+
+//MARK: - CoolectionView stack
 
 extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -64,5 +91,10 @@ extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSou
         layout.invalidateLayout()
 
         return CGSize(width: ((self.view.frame.width / 2 ) - 10), height:((self.view.frame.width / 2) + 11));
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "openAlbumSegue", sender: albums[indexPath.row])
     }
 }

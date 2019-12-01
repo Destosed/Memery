@@ -28,6 +28,17 @@
 		428351462390164600F42E7F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428351442390164600F42E7F /* AlbumCell.swift */; };
 		428351472390164600F42E7F /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428351452390164600F42E7F /* AlbumCell.xib */; };
 		42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AABFB9238F126000F33FF2 /* TabbarController.swift */; };
+		42AB6F9823940FFD00207A3B /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6F9723940FFD00207A3B /* LocalDataManager.swift */; };
+		42AB6F9B2394107700207A3B /* Memery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6F992394107700207A3B /* Memery.xcdatamodeld */; };
+		42AB6FAB2394260D00207A3B /* Album+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FA92394260D00207A3B /* Album+CoreDataClass.swift */; };
+		42AB6FAC2394260D00207A3B /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FAA2394260D00207A3B /* Album+CoreDataProperties.swift */; };
+		42AB6FAE239427B000207A3B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FAD239427B000207A3B /* AlbumViewController.swift */; };
+		42AB6FB1239429A800207A3B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FAF239429A800207A3B /* ImageCell.swift */; };
+		42AB6FB2239429A800207A3B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AB6FB0239429A800207A3B /* ImageCell.xib */; };
+		42AB6FB7239432AE00207A3B /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FB3239432AE00207A3B /* Image+CoreDataClass.swift */; };
+		42AB6FB8239432AE00207A3B /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FB4239432AE00207A3B /* Image+CoreDataProperties.swift */; };
+		42AB6FB9239432AE00207A3B /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FB5239432AE00207A3B /* Tag+CoreDataClass.swift */; };
+		42AB6FBA239432AE00207A3B /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FB6239432AE00207A3B /* Tag+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +65,17 @@
 		428351442390164600F42E7F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		428351452390164600F42E7F /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
 		42AABFB9238F126000F33FF2 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		42AB6F9723940FFD00207A3B /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		42AB6F9A2394107700207A3B /* Memery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memery.xcdatamodel; sourceTree = "<group>"; };
+		42AB6FA92394260D00207A3B /* Album+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Album+CoreDataClass.swift"; path = "../../Album+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42AB6FAA2394260D00207A3B /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Album+CoreDataProperties.swift"; path = "../../Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42AB6FAD239427B000207A3B /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		42AB6FAF239429A800207A3B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		42AB6FB0239429A800207A3B /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		42AB6FB3239432AE00207A3B /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "../../Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42AB6FB4239432AE00207A3B /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "../../Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42AB6FB5239432AE00207A3B /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Tag+CoreDataClass.swift"; path = "../../Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42AB6FB6239432AE00207A3B /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Tag+CoreDataProperties.swift"; path = "../../Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +117,8 @@
 		4226AEEC238D142100593D6D /* Memery */ = {
 			isa = PBXGroup;
 			children = (
+				42AB6F9C2394185700207A3B /* Models */,
+				42AB6F9623940FD300207A3B /* DataManagers */,
 				42AABFB8238F123600F33FF2 /* CustomUI */,
 				42F946AC2390133000DC585B /* User Stories */,
 				4226AEED238D142100593D6D /* AppDelegate.swift */,
@@ -103,6 +127,7 @@
 				4226AEF6238D142300593D6D /* Assets.xcassets */,
 				4226AEF8238D142300593D6D /* LaunchScreen.storyboard */,
 				4226AEFB238D142300593D6D /* Info.plist */,
+				42AB6F992394107700207A3B /* Memery.xcdatamodeld */,
 			);
 			path = Memery;
 			sourceTree = "<group>";
@@ -170,6 +195,27 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
+		42AB6F9623940FD300207A3B /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				42AB6F9723940FFD00207A3B /* LocalDataManager.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		42AB6F9C2394185700207A3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42AB6FB3239432AE00207A3B /* Image+CoreDataClass.swift */,
+				42AB6FB4239432AE00207A3B /* Image+CoreDataProperties.swift */,
+				42AB6FB5239432AE00207A3B /* Tag+CoreDataClass.swift */,
+				42AB6FB6239432AE00207A3B /* Tag+CoreDataProperties.swift */,
+				42AB6FA92394260D00207A3B /* Album+CoreDataClass.swift */,
+				42AB6FAA2394260D00207A3B /* Album+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		42F946AC2390133000DC585B /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +234,8 @@
 			children = (
 				428351442390164600F42E7F /* AlbumCell.swift */,
 				428351452390164600F42E7F /* AlbumCell.xib */,
+				42AB6FAF239429A800207A3B /* ImageCell.swift */,
+				42AB6FB0239429A800207A3B /* ImageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				4226AF1B238D24C300593D6D /* LocalViewController.swift */,
+				42AB6FAD239427B000207A3B /* AlbumViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +310,7 @@
 				4226AF14238D1D2B00593D6D /* LocalScreen.storyboard in Resources */,
 				4226AF08238D192400593D6D /* Main.storyboard in Resources */,
 				4226AEFA238D142300593D6D /* LaunchScreen.storyboard in Resources */,
+				42AB6FB2239429A800207A3B /* ImageCell.xib in Resources */,
 				4226AEF7238D142300593D6D /* Assets.xcassets in Resources */,
 				428351472390164600F42E7F /* AlbumCell.xib in Resources */,
 				4205D307238F2E3A001C34AA /* SearchScreen.storyboard in Resources */,
@@ -277,13 +327,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42AB6FBA239432AE00207A3B /* Tag+CoreDataProperties.swift in Sources */,
+				42AB6FB9239432AE00207A3B /* Tag+CoreDataClass.swift in Sources */,
 				4205D309238F2E51001C34AA /* SearchViewController.swift in Sources */,
 				4226AF18238D24B100593D6D /* AllViewController.swift in Sources */,
+				42AB6FAC2394260D00207A3B /* Album+CoreDataProperties.swift in Sources */,
 				4226AF1A238D24BA00593D6D /* CloudViewController.swift in Sources */,
 				4226AF16238D24A300593D6D /* MoreViewController.swift in Sources */,
+				42AB6FAE239427B000207A3B /* AlbumViewController.swift in Sources */,
+				42AB6FAB2394260D00207A3B /* Album+CoreDataClass.swift in Sources */,
+				42AB6F9B2394107700207A3B /* Memery.xcdatamodeld in Sources */,
 				42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */,
+				42AB6F9823940FFD00207A3B /* LocalDataManager.swift in Sources */,
+				42AB6FB1239429A800207A3B /* ImageCell.swift in Sources */,
 				4226AEF2238D142100593D6D /* ViewController.swift in Sources */,
+				42AB6FB8239432AE00207A3B /* Image+CoreDataProperties.swift in Sources */,
 				4226AEEE238D142100593D6D /* AppDelegate.swift in Sources */,
+				42AB6FB7239432AE00207A3B /* Image+CoreDataClass.swift in Sources */,
 				4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */,
 				42835143239015D800F42E7F /* Album.swift in Sources */,
 				423BB378238FDEE700533865 /* MyTabBar.swift in Sources */,
@@ -478,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		42AB6F992394107700207A3B /* Memery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42AB6F9A2394107700207A3B /* Memery.xcdatamodel */,
+			);
+			currentVersion = 42AB6F9A2394107700207A3B /* Memery.xcdatamodel */;
+			path = Memery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4226AEE2238D142100593D6D /* Project object */;
 }

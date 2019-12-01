@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class Album {
+class AlbumDTO {
     
     let id = UUID().uuidString
     let name: String
