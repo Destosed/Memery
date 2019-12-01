@@ -10,6 +10,7 @@
 import Foundation
 import CoreData
 
+
 extension Album {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Album> {

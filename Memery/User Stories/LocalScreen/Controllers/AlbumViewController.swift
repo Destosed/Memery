@@ -14,11 +14,8 @@ class AlbumViewController: UIViewController {
     
     //MARK: - IBAсtions
     
-    @IBAction func addButtonPressed(_ sender: Any) {
-        
-        let newImage = LocalDataManager.shared.addImage(to: album, image: UIImage(named: "jojo")!)
-        images.append(newImage)
-        collectionView.reloadData()
+    @IBAction func showMoreButtonPressed(_ sender: Any) {
+        AlertService.showOptionsAlert(on: self, for: album)
     }
 
     //MARK: - Lifestyle circle
@@ -32,6 +29,8 @@ class AlbumViewController: UIViewController {
     }
 }
 
+//MARK: - CollectionView Stack
+
 extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func setupCollectionView() {
@@ -41,6 +40,8 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         let nibCell = UINib(nibName: "ImageCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: imageCellIdentifier)
+        
+        collectionView.alwaysBounceVertical = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

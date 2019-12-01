@@ -4,12 +4,11 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="album" inverseEntity="Image"/>
+        <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image"/>
     </entity>
     <entity name="Image" representedClassName="Image" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imageData" attributeType="Binary"/>
-        <relationship name="album" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="image" inverseEntity="Album"/>
         <relationship name="tag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="image" inverseEntity="Tag"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES">
@@ -19,7 +18,7 @@
     </entity>
     <elements>
         <element name="Album" positionX="-16.26953125" positionY="0.80078125" width="128" height="103"/>
-        <element name="Image" positionX="224.84765625" positionY="176.1484375" width="128" height="103"/>
+        <element name="Image" positionX="224.84765625" positionY="176.1484375" width="128" height="88"/>
         <element name="Tag" positionX="483.76953125" positionY="-6.83984375" width="128" height="88"/>
     </elements>
 </model>

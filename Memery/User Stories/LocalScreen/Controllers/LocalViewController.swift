@@ -40,6 +40,12 @@ class LocalViewController: UIViewController {
         fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchData()
+    }
+    
     //MARK: - DataWorkers
     
     func fetchData() {
@@ -68,6 +74,8 @@ extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         let nibCell = UINib(nibName: "AlbumCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: "albumCell")
+        
+        collectionView.alwaysBounceVertical = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
