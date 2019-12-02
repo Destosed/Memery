@@ -15,6 +15,15 @@ class LocalDataManager {
         return albums
     }
     
+    func getAlbum(by UUID: UUID) -> Album {
+        
+        let fetchRequest = NSFetchRequest<Album>(entityName: "Album")
+        let predicate = NSPredicate(format: "id = '\(UUID)'", argumentArray: nil)
+        fetchRequest.predicate = predicate
+        guard let albums = try? context.fetch(fetchRequest).first else { fatalError("Couldn't func album by id") }
+        return albums
+    }
+    
     func addAlbum(name: String) -> Album {
         
         let album = Album(context: self.context)

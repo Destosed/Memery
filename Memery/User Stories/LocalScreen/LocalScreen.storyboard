@@ -112,7 +112,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="9KT-IQ-YE1" id="MQD-jK-7Ei"/>
-                        <segue destination="aOJ-fv-oAT" kind="show" id="Wga-EA-CjD"/>
+                        <segue destination="aOJ-fv-oAT" kind="show" identifier="showImageSegue" id="Wga-EA-CjD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIW-G0-sft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
         <scene sceneID="c4j-6N-r1P">
             <objects>
                 <tableViewController id="aOJ-fv-oAT" customClass="ImageViewController" customModule="Memery" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lfz-wD-GAf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lfz-wD-GAf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -131,7 +131,7 @@
                             <tableViewSection id="tfL-So-8mn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="205" id="SMc-wK-VPs">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="205"/>
+                                        <rect key="frame" x="0.0" y="18" width="375" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SMc-wK-VPs" id="dPz-dS-m7D">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
@@ -150,7 +150,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="It4-fY-7zp">
-                                        <rect key="frame" x="0.0" y="233" width="375" height="143"/>
+                                        <rect key="frame" x="0.0" y="223" width="375" height="143"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="It4-fY-7zp" id="Rkb-lF-E2C">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>

@@ -6,8 +6,13 @@ class AlbumViewController: UIViewController {
     
     private let showImageSegueIdentifier = "showImageSegue"
     private let imageCellIdentifier = "AlbumCell"
+    
     var album: Album!
-    var images: [Image] = []
+    var images: [Image] {
+        return album.image?.allObjects as! [Image]
+    }
+    
+    var imagePickerController = UIImagePickerController()
     
     //MARK: - IBOutlets
     
@@ -25,8 +30,16 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupImagePicker()
         title = album.name
-        images = album.image?.allObjects as! [Image]
+    }
+    
+    //MARK: - Data workers
+    
+    func fetchData() {
+        
+        album = LocalDataManager.shared.getAlbum(by: album.id!)
+        collectionView.reloadData()
     }
     
     //MARK: - Segue
@@ -75,6 +88,34 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("Переходим по индексу \(indexPath.row)")
+        print("Всего изображений: \(images.count)")
+        print("ID нашего изображения: \(images[indexPath.row])")
         performSegue(withIdentifier: showImageSegueIdentifier, sender: images[indexPath.row])
+    }
+}
+
+//MARK: - Image Picker
+extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func setupImagePicker() {
+        
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.allowsEditing = true
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            LocalDataManager.shared.addImage(to: album, image: image)
+            collectionView.reloadData()
+        }
+        else {
+            //Ловим ошибку
+        }
+        imagePickerController.dismiss(animated: true, completion: nil)
     }
 }

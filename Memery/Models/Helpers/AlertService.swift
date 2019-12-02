@@ -11,16 +11,24 @@ class AlertService {
         vc.present(alertController, animated: true)
     }
     
-    static func showOptionsAlert(on vc: UIViewController, for album: Album) {
+    static func showOptionsAlert(on vc: AlbumViewController, for album: Album) {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete Album", style: .destructive) { _ in
             LocalDataManager.shared.deleteAlbum(album: album)
             vc.navigationController?.popViewController(animated: true)
         }
+        let addImageAction = UIAlertAction(title: "Add image", style: .default) { _ in
+            //TODO
+            vc.present(vc.imagePickerController, animated: true)
+        }
+        
         alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)
+        alertController.addAction(addImageAction)
+        
         vc.present(alertController, animated: true)
     }
 }
