@@ -16,6 +16,8 @@ class ImageViewController: UIViewController {
     }
 }
 
+//MARK: - TableView Stack
+
 extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func setupTableView() {
@@ -52,13 +54,12 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: tagsPartCellIdentifier) as! TagsPartCell
             cell.setup(for: image)
+            cell.owner = self
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        //TODO:
         
         if indexPath.row == 0 {
             
@@ -70,9 +71,4 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableView.automaticDimension
         }
     }
-}
-
-extension ImageViewController {
-    
-    
 }

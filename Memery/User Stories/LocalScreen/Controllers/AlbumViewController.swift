@@ -111,8 +111,6 @@ extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationCont
             
             LocalDataManager.shared.addImage(to: album, image: image)
             collectionView.reloadData()
-            
-            print(image.size)
         }
         else {
             //Ловим ошибку

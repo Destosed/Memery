@@ -65,6 +65,15 @@ class LocalDataManager {
         return imageToAdd
     }
     
+    func isImageContainsTag(image: Image, tagTitle: String) -> Bool {
+        
+        guard let tags = image.tag?.allObjects as? [Tag] else { fatalError() }
+        for tag in tags {
+            if tag.text! == tagTitle { return true }
+        }
+        return false
+    }
+    
     //MARK: - Tag
     
     func getAllTags() -> [Tag] {
@@ -76,6 +85,14 @@ class LocalDataManager {
         let tagToAdd = Tag(context: context)
         tagToAdd.text = tag
         image.addToTag(tagToAdd)
+        saveContext()
+    }
+    
+    func deleteTag(from image: Image, tagTitle: String) {
+        
+        let imageTags = image.tag?.allObjects as! [Tag]
+        let tagToDelete = imageTags.first(where: { $0.text! == tagTitle } )
+        tagToDelete?.removeFromImage(image)
         saveContext()
     }
     
