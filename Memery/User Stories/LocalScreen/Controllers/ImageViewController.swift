@@ -16,8 +16,14 @@ class ImageViewController: UITableViewController {
     //MARK: - IBActions
     
     @IBAction func addTagButtonPressed(_ sender: Any) {
-        tagListView.addTag(textField.text!)
-        tableView.reloadData()
+        
+        if let tag = textField.text, !tag.isEmpty {
+            
+            LocalDataManager.shared.addTag(to: image, tag: tag)
+            tagListView.addTag(tag)
+            tableView.reloadData()
+            textField.text?.removeAll()
+        }
     }
     
     //MARK: - Life Circle
@@ -25,6 +31,8 @@ class ImageViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imageTags = image.tag?.allObjects as! [Tag]
+        for tag in imageTags { print(tag.text!) }
         
         setupUI()
         setup(for: image)
@@ -37,15 +45,16 @@ class ImageViewController: UITableViewController {
         guard let imageData = image.imageData else { return }
         imageView.image = UIImage(data: imageData)
         
-        guard let tagsArray = image.tag?.allObjects as? [String] else { return }
-        guard !tagsArray.isEmpty else { return }
-        tagListView.addTags(tagsArray)
+        guard let tagsArray = image.tag?.allObjects as? [Tag] else { return }
+        let stringTags: [String] = tagsArray.map { $0.text! }
+        tagListView.addTags(stringTags)
     }
     
     func setupUI() {
         
         //Например закруглить текстфилд или увеличить шрифт тегов. Посмотрим
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        tagListView.textFont = UIFont.systemFont(ofSize: 20)
     }
 
     // MARK: - Table view data source

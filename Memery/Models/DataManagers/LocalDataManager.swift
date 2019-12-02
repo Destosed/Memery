@@ -71,6 +71,14 @@ class LocalDataManager {
         return []
     }
     
+    func addTag(to image: Image, tag: String) {
+        
+        let tagToAdd = Tag(context: context)
+        tagToAdd.text = tag
+        image.addToTag(tagToAdd)
+        saveContext()
+    }
+    
     //MARK: - Core Data stack
     
     lazy var context = self.persistentContainer.viewContext
