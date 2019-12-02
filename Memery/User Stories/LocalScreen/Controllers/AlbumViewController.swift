@@ -91,9 +91,6 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("Переходим по индексу \(indexPath.row)")
-        print("Всего изображений: \(images.count)")
-        print("ID нашего изображения: \(images[indexPath.row])")
         performSegue(withIdentifier: showImageSegueIdentifier, sender: images[indexPath.row])
     }
 }
