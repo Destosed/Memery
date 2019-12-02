@@ -21,13 +21,12 @@ class AlertService {
             vc.navigationController?.popViewController(animated: true)
         }
         let addImageAction = UIAlertAction(title: "Add image", style: .default) { _ in
-            //TODO
             vc.present(vc.imagePickerController, animated: true)
         }
         
-        alertController.addAction(cancelAction)
-        alertController.addAction(deleteAction)
         alertController.addAction(addImageAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
         
         vc.present(alertController, animated: true)
     }

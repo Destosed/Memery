@@ -36,6 +36,7 @@ class LocalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .secondarySystemGroupedBackground
         setupCollectionView()
         fetchData()
     }
@@ -71,6 +72,8 @@ extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        self.view.backgroundColor = .systemGroupedBackground
         
         let nibCell = UINib(nibName: "AlbumCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: "albumCell")

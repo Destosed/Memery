@@ -29,6 +29,8 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .systemGroupedBackground
+        
         setupCollectionView()
         setupImagePicker()
         title = album.name
