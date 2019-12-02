@@ -102,7 +102,7 @@ extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationCont
         
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
-        imagePickerController.allowsEditing = true
+        imagePickerController.allowsEditing = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -111,6 +111,8 @@ extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationCont
             
             LocalDataManager.shared.addImage(to: album, image: image)
             collectionView.reloadData()
+            
+            print(image.size)
         }
         else {
             //Ловим ошибку

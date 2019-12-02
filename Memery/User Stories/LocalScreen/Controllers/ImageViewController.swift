@@ -23,7 +23,7 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.estimatedRowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = UITableView.automaticDimension
         
         let imagePartCellNib = UINib(nibName: "ImagePartCell", bundle: nil)
         tableView.register(imagePartCellNib, forCellReuseIdentifier: imagePartCellIdentifier)
@@ -46,12 +46,28 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: imagePartCellIdentifier) as! ImagePartCell
             cell.setup(with: image)
+            cell.backgroundColor = .cyan
             return cell
         } else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: tagsPartCellIdentifier) as! TagsPartCell
             cell.setup(for: image)
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        //TODO:
+        
+        if indexPath.row == 0 {
+            
+            guard let imageData = image.imageData else { return 0 }
+            guard let image = UIImage(data: imageData) else { return 0 }
+            let decreaseCoefficient = image.size.width / 375
+            return image.size.height / decreaseCoefficient
+        } else {
+            return UITableView.automaticDimension
         }
     }
 }
