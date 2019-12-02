@@ -46,7 +46,7 @@ class LocalDataManager {
     
     func deleteAlbum(album: Album) {
         context.delete(album)
-        try? context.save()
+        saveContext()
     }
     
     //MARK: - Image
@@ -72,6 +72,15 @@ class LocalDataManager {
             if tag.text! == tagTitle { return true }
         }
         return false
+    }
+    
+    func deleteImage(image: Image) {
+        
+        if let imageTags = image.tag {
+            image.removeFromTag(imageTags)
+        }
+        context.delete(image)
+        saveContext()
     }
     
     //MARK: - Tag

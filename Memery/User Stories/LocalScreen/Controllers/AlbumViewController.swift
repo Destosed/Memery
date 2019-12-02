@@ -36,11 +36,17 @@ class AlbumViewController: UIViewController {
         title = album.name
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
+    }
+    
     //MARK: - Data workers
     
     func fetchData() {
         
-        album = LocalDataManager.shared.getAlbum(by: album.id!)
+        guard let albumID = album.id else { collectionView.reloadData() ; return }
+        album = LocalDataManager.shared.getAlbum(by: albumID)
         collectionView.reloadData()
     }
     

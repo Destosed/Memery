@@ -14,6 +14,10 @@ class ImageViewController: UIViewController {
 
         setupTableView()
     }
+    
+    @IBAction func showOptionsButtonPressed(_ sender: Any) {
+        AlertService.showOptionsAlert(on: self, for: image)
+    }
 }
 
 //MARK: - TableView Stack

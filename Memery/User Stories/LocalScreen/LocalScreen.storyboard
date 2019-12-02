@@ -121,7 +121,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qsw-qG-yPh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Image" id="6Id-Co-fGZ"/>
+                    <navigationItem key="navigationItem" title="Image" id="6Id-Co-fGZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="moreIcon2x" id="Mo6-u4-Cfd">
+                            <connections>
+                                <action selector="showOptionsButtonPressed:" destination="LI0-wj-ka6" id="5OC-kP-RnU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FTi-2b-bal" id="jqp-DY-21d"/>
                     </connections>
