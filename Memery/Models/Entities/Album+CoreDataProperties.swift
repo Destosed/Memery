@@ -1,14 +1,6 @@
-//
-//  Album+CoreDataProperties.swift
-//  Memery
-//
-//  Created by Никита Лужбин on 02.12.2019.
-//  Copyright © 2019 Никита. All rights reserved.
-//
-//
-
 import Foundation
 import CoreData
+import UIKit
 
 
 extension Album {
@@ -17,8 +9,8 @@ extension Album {
         return NSFetchRequest<Album>(entityName: "Album")
     }
 
-    @NSManaged public var id: UUID?
-    @NSManaged public var imageData: Data?
+    @NSManaged public var id: String?
+    @NSManaged public var coverImage: UIImage?
     @NSManaged public var name: String?
     @NSManaged public var image: NSSet?
 

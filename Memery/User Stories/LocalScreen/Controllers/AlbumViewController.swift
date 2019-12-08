@@ -38,15 +38,7 @@ class AlbumViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchData()
-    }
-    
-    //MARK: - Data workers
-    
-    func fetchData() {
         
-        guard let albumID = album.id else { collectionView.reloadData() ; return }
-        album = LocalDataManager.shared.getAlbum(by: albumID)
         collectionView.reloadData()
     }
     
@@ -115,11 +107,11 @@ extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationCont
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             
-            LocalDataManager.shared.addImage(to: album, image: image)
+            let _ = LocalDataManager.shared.addImage(to: album, image: image)
             collectionView.reloadData()
         }
         else {
-            //Ловим ошибку
+            fatalError()
         }
         imagePickerController.dismiss(animated: true, completion: nil)
     }

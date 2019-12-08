@@ -29,8 +29,6 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //tableView.estimatedRowHeight = UITableView.automaticDimension
-        
         let imagePartCellNib = UINib(nibName: "ImagePartCell", bundle: nil)
         tableView.register(imagePartCellNib, forCellReuseIdentifier: imagePartCellIdentifier)
         
@@ -67,8 +65,7 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             
-            guard let imageData = image.imageData else { return 0 }
-            guard let image = UIImage(data: imageData) else { return 0 }
+            let image = self.image.image!
             let decreaseCoefficient = image.size.width / 375
             return image.size.height / decreaseCoefficient
         } else {
