@@ -45,6 +45,8 @@
 		42DF5E6D239D1848007E679E /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E67239D1848007E679E /* Album+CoreDataProperties.swift */; };
 		42DF5E6E239D1848007E679E /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E68239D1848007E679E /* Image+CoreDataClass.swift */; };
 		42DF5E6F239D1848007E679E /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E69239D1848007E679E /* Image+CoreDataProperties.swift */; };
+		42DF5E76239D4A02007E679E /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DF5E75239D4A02007E679E /* Alert.storyboard */; };
+		42DF5E78239D5117007E679E /* AddLocalAlbumAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E77239D5117007E679E /* AddLocalAlbumAlertVC.swift */; };
 		42EC302A2395628A00C234C6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC30292395628A00C234C6 /* ImageViewController.swift */; };
 		5C35128D406E86CDD1CACBF5 /* Pods_Memery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		42DF5E67239D1848007E679E /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		42DF5E68239D1848007E679E /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		42DF5E69239D1848007E679E /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42DF5E75239D4A02007E679E /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		42DF5E77239D5117007E679E /* AddLocalAlbumAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocalAlbumAlertVC.swift; sourceTree = "<group>"; };
 		42EC30292395628A00C234C6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B27902BC87E8DF0DD4349AE /* Pods-Memery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memery.release.xcconfig"; path = "Target Support Files/Pods-Memery/Pods-Memery.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,10 +291,20 @@
 		42AB6FBC2394608100207A3B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				42DF5E74239D49A8007E679E /* Alerts */,
 				42DF5E62239D17D6007E679E /* ImageTransformer.swift */,
-				42AB6FBD2394609500207A3B /* AlertService.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		42DF5E74239D49A8007E679E /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				42AB6FBD2394609500207A3B /* AlertService.swift */,
+				42DF5E75239D4A02007E679E /* Alert.storyboard */,
+				42DF5E77239D5117007E679E /* AddLocalAlbumAlertVC.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		42F946AC2390133000DC585B /* User Stories */ = {
@@ -399,6 +413,7 @@
 				4226AEFA238D142300593D6D /* LaunchScreen.storyboard in Resources */,
 				42AB6FB2239429A800207A3B /* ImageCell.xib in Resources */,
 				4226AEF7238D142300593D6D /* Assets.xcassets in Resources */,
+				42DF5E76239D4A02007E679E /* Alert.storyboard in Resources */,
 				428351472390164600F42E7F /* AlbumCell.xib in Resources */,
 				427B0B4023955CD60045DAC4 /* ImagePartCell.xib in Resources */,
 				4205D307238F2E3A001C34AA /* SearchScreen.storyboard in Resources */,
@@ -465,6 +480,7 @@
 				42AB6FBE2394609500207A3B /* AlertService.swift in Sources */,
 				4226AF16238D24A300593D6D /* MoreViewController.swift in Sources */,
 				42AB6FAE239427B000207A3B /* AlbumViewController.swift in Sources */,
+				42DF5E78239D5117007E679E /* AddLocalAlbumAlertVC.swift in Sources */,
 				42AB6F9B2394107700207A3B /* Memery.xcdatamodeld in Sources */,
 				42DF5E6A239D1848007E679E /* Tag+CoreDataClass.swift in Sources */,
 				42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */,
