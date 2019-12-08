@@ -7,7 +7,6 @@ class ImagePartCell: UITableViewCell {
     
     func setup(with image: Image) {
         
-        guard let imageData = image.imageData else { return }
-        myImageView.image = UIImage(data: imageData)
+        myImageView.image = image.image
     }
 }

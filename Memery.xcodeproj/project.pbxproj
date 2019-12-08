@@ -24,12 +24,6 @@
 		4226AF1A238D24BA00593D6D /* CloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF19238D24BA00593D6D /* CloudViewController.swift */; };
 		4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4226AF1B238D24C300593D6D /* LocalViewController.swift */; };
 		423BB378238FDEE700533865 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423BB377238FDEE700533865 /* MyTabBar.swift */; };
-		425A82D423946EB600AA5BB7 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82CE23946EB600AA5BB7 /* Image+CoreDataClass.swift */; };
-		425A82D523946EB600AA5BB7 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82CF23946EB600AA5BB7 /* Image+CoreDataProperties.swift */; };
-		425A82D623946EB600AA5BB7 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82D023946EB600AA5BB7 /* Tag+CoreDataClass.swift */; };
-		425A82D723946EB600AA5BB7 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82D123946EB600AA5BB7 /* Tag+CoreDataProperties.swift */; };
-		425A82D823946EB600AA5BB7 /* Album+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82D223946EB600AA5BB7 /* Album+CoreDataClass.swift */; };
-		425A82D923946EB600AA5BB7 /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A82D323946EB600AA5BB7 /* Album+CoreDataProperties.swift */; };
 		427B0B3F23955CD60045DAC4 /* ImagePartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B0B3D23955CD60045DAC4 /* ImagePartCell.swift */; };
 		427B0B4023955CD60045DAC4 /* ImagePartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427B0B3E23955CD60045DAC4 /* ImagePartCell.xib */; };
 		427B0B4323955CFE0045DAC4 /* TagsPartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B0B4123955CFE0045DAC4 /* TagsPartCell.swift */; };
@@ -44,6 +38,13 @@
 		42AB6FB1239429A800207A3B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FAF239429A800207A3B /* ImageCell.swift */; };
 		42AB6FB2239429A800207A3B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42AB6FB0239429A800207A3B /* ImageCell.xib */; };
 		42AB6FBE2394609500207A3B /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB6FBD2394609500207A3B /* AlertService.swift */; };
+		42DF5E63239D17D6007E679E /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E62239D17D6007E679E /* ImageTransformer.swift */; };
+		42DF5E6A239D1848007E679E /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E64239D1848007E679E /* Tag+CoreDataClass.swift */; };
+		42DF5E6B239D1848007E679E /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E65239D1848007E679E /* Tag+CoreDataProperties.swift */; };
+		42DF5E6C239D1848007E679E /* Album+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E66239D1848007E679E /* Album+CoreDataClass.swift */; };
+		42DF5E6D239D1848007E679E /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E67239D1848007E679E /* Album+CoreDataProperties.swift */; };
+		42DF5E6E239D1848007E679E /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E68239D1848007E679E /* Image+CoreDataClass.swift */; };
+		42DF5E6F239D1848007E679E /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF5E69239D1848007E679E /* Image+CoreDataProperties.swift */; };
 		42EC302A2395628A00C234C6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC30292395628A00C234C6 /* ImageViewController.swift */; };
 		5C35128D406E86CDD1CACBF5 /* Pods_Memery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */; };
 /* End PBXBuildFile section */
@@ -69,12 +70,6 @@
 		4226AF19238D24BA00593D6D /* CloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewController.swift; sourceTree = "<group>"; };
 		4226AF1B238D24C300593D6D /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
 		423BB377238FDEE700533865 /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
-		425A82CE23946EB600AA5BB7 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
-		425A82CF23946EB600AA5BB7 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		425A82D023946EB600AA5BB7 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
-		425A82D123946EB600AA5BB7 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		425A82D223946EB600AA5BB7 /* Album+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataClass.swift"; sourceTree = "<group>"; };
-		425A82D323946EB600AA5BB7 /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		427B0B3D23955CD60045DAC4 /* ImagePartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePartCell.swift; sourceTree = "<group>"; };
 		427B0B3E23955CD60045DAC4 /* ImagePartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePartCell.xib; sourceTree = "<group>"; };
 		427B0B4123955CFE0045DAC4 /* TagsPartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsPartCell.swift; sourceTree = "<group>"; };
@@ -89,6 +84,13 @@
 		42AB6FAF239429A800207A3B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		42AB6FB0239429A800207A3B /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		42AB6FBD2394609500207A3B /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		42DF5E62239D17D6007E679E /* ImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
+		42DF5E64239D1848007E679E /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42DF5E65239D1848007E679E /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42DF5E66239D1848007E679E /* Album+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42DF5E67239D1848007E679E /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42DF5E68239D1848007E679E /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		42DF5E69239D1848007E679E /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		42EC30292395628A00C234C6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		8B48EE27BE7A1AB4CEFB4E40 /* Pods_Memery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B27902BC87E8DF0DD4349AE /* Pods-Memery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memery.release.xcconfig"; path = "Target Support Files/Pods-Memery/Pods-Memery.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,12 +274,12 @@
 		42AB6FBB2394604E00207A3B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				425A82CE23946EB600AA5BB7 /* Image+CoreDataClass.swift */,
-				425A82CF23946EB600AA5BB7 /* Image+CoreDataProperties.swift */,
-				425A82D023946EB600AA5BB7 /* Tag+CoreDataClass.swift */,
-				425A82D123946EB600AA5BB7 /* Tag+CoreDataProperties.swift */,
-				425A82D223946EB600AA5BB7 /* Album+CoreDataClass.swift */,
-				425A82D323946EB600AA5BB7 /* Album+CoreDataProperties.swift */,
+				42DF5E64239D1848007E679E /* Tag+CoreDataClass.swift */,
+				42DF5E65239D1848007E679E /* Tag+CoreDataProperties.swift */,
+				42DF5E66239D1848007E679E /* Album+CoreDataClass.swift */,
+				42DF5E67239D1848007E679E /* Album+CoreDataProperties.swift */,
+				42DF5E68239D1848007E679E /* Image+CoreDataClass.swift */,
+				42DF5E69239D1848007E679E /* Image+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -285,6 +287,7 @@
 		42AB6FBC2394608100207A3B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				42DF5E62239D17D6007E679E /* ImageTransformer.swift */,
 				42AB6FBD2394609500207A3B /* AlertService.swift */,
 			);
 			path = Helpers;
@@ -463,21 +466,22 @@
 				4226AF16238D24A300593D6D /* MoreViewController.swift in Sources */,
 				42AB6FAE239427B000207A3B /* AlbumViewController.swift in Sources */,
 				42AB6F9B2394107700207A3B /* Memery.xcdatamodeld in Sources */,
+				42DF5E6A239D1848007E679E /* Tag+CoreDataClass.swift in Sources */,
 				42AABFBA238F126000F33FF2 /* TabbarController.swift in Sources */,
 				42EC302A2395628A00C234C6 /* ImageViewController.swift in Sources */,
+				42DF5E6E239D1848007E679E /* Image+CoreDataClass.swift in Sources */,
+				42DF5E6B239D1848007E679E /* Tag+CoreDataProperties.swift in Sources */,
+				42DF5E63239D17D6007E679E /* ImageTransformer.swift in Sources */,
 				42AB6F9823940FFD00207A3B /* LocalDataManager.swift in Sources */,
 				427B0B3F23955CD60045DAC4 /* ImagePartCell.swift in Sources */,
-				425A82D423946EB600AA5BB7 /* Image+CoreDataClass.swift in Sources */,
-				425A82D623946EB600AA5BB7 /* Tag+CoreDataClass.swift in Sources */,
-				425A82D723946EB600AA5BB7 /* Tag+CoreDataProperties.swift in Sources */,
 				42AB6FB1239429A800207A3B /* ImageCell.swift in Sources */,
 				4226AEF2238D142100593D6D /* ViewController.swift in Sources */,
-				425A82D923946EB600AA5BB7 /* Album+CoreDataProperties.swift in Sources */,
+				42DF5E6F239D1848007E679E /* Image+CoreDataProperties.swift in Sources */,
+				42DF5E6C239D1848007E679E /* Album+CoreDataClass.swift in Sources */,
+				42DF5E6D239D1848007E679E /* Album+CoreDataProperties.swift in Sources */,
 				4226AEEE238D142100593D6D /* AppDelegate.swift in Sources */,
 				4226AF1C238D24C300593D6D /* LocalViewController.swift in Sources */,
 				42835143239015D800F42E7F /* Album.swift in Sources */,
-				425A82D823946EB600AA5BB7 /* Album+CoreDataClass.swift in Sources */,
-				425A82D523946EB600AA5BB7 /* Image+CoreDataProperties.swift in Sources */,
 				423BB378238FDEE700533865 /* MyTabBar.swift in Sources */,
 				4226AEF0238D142100593D6D /* SceneDelegate.swift in Sources */,
 				428351462390164600F42E7F /* AlbumCell.swift in Sources */,

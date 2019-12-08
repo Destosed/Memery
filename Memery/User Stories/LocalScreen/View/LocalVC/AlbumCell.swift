@@ -10,12 +10,7 @@ class AlbumCell: UICollectionViewCell {
         albumImageView.layer.cornerRadius = albumImageView.frame.height / 8
         
         albumNameLabel.text = album.name
-        
-        if let imageData = album.imageData {
-            albumImageView.image = UIImage(data: imageData)
-        } else {
-            albumImageView.image = UIImage(named: "album_default")
-        }
+        albumImageView.image = album.coverImage
         
         layoutIfNeeded()
     }
