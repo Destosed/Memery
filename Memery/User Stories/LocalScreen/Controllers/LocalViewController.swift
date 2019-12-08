@@ -91,7 +91,7 @@ extension LocalViewController: UICollectionViewDelegate, UICollectionViewDataSou
         layout.minimumLineSpacing = 03
         layout.invalidateLayout()
 
-        return CGSize(width: ((self.view.frame.width / 2 ) - 10), height:((self.view.frame.width / 2) + 11));
+        return CGSize(width: ((self.view.frame.width / 2 ) - 5), height:((self.view.frame.width / 2) + 25));
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

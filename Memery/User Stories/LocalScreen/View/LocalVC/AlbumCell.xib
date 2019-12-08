@@ -10,54 +10,66 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlbumCell" customModule="Memery" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="207" height="230"/>
+            <rect key="frame" x="0.0" y="0.0" width="214" height="256"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="207" height="230"/>
+                <rect key="frame" x="0.0" y="0.0" width="214" height="256"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-Cz-Kyx">
-                        <rect key="frame" x="0.0" y="0.0" width="207" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="256"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNU-an-sfc">
-                                <rect key="frame" x="0.0" y="29" width="207" height="201"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="album_name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBA-rr-xt2">
-                                <rect key="frame" x="8" y="8" width="191" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="214"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="yet-r0-mip"/>
+                                    <constraint firstAttribute="width" secondItem="nNU-an-sfc" secondAttribute="height" multiplier="1:1" id="Msx-T2-B93"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xGz-LP-HUm">
+                                <rect key="frame" x="0.0" y="214" width="214" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="album_name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBA-rr-xt2">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="22.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="93" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4G-1g-uuK">
+                                        <rect key="frame" x="0.0" y="22.5" width="214" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GBA-rr-xt2" firstAttribute="top" secondItem="DG8-Cz-Kyx" secondAttribute="top" constant="8" id="2vH-ge-hS0"/>
-                            <constraint firstItem="GBA-rr-xt2" firstAttribute="leading" secondItem="DG8-Cz-Kyx" secondAttribute="leading" constant="8" id="LXh-iG-8YW"/>
-                            <constraint firstAttribute="trailing" secondItem="nNU-an-sfc" secondAttribute="trailing" id="Njt-Fp-wGm"/>
-                            <constraint firstAttribute="bottom" secondItem="nNU-an-sfc" secondAttribute="bottom" id="Nww-u8-rS3"/>
-                            <constraint firstItem="nNU-an-sfc" firstAttribute="top" secondItem="GBA-rr-xt2" secondAttribute="bottom" id="Pma-up-9jQ"/>
-                            <constraint firstItem="nNU-an-sfc" firstAttribute="leading" secondItem="DG8-Cz-Kyx" secondAttribute="leading" id="WdV-WC-S3a"/>
-                            <constraint firstAttribute="trailing" secondItem="GBA-rr-xt2" secondAttribute="trailing" constant="8" id="ZDC-Qi-D5k"/>
+                            <constraint firstItem="nNU-an-sfc" firstAttribute="top" secondItem="DG8-Cz-Kyx" secondAttribute="top" id="5Hr-JB-6Tu"/>
+                            <constraint firstAttribute="trailing" secondItem="xGz-LP-HUm" secondAttribute="trailing" id="5T5-U2-GRF"/>
+                            <constraint firstAttribute="bottom" secondItem="xGz-LP-HUm" secondAttribute="bottom" id="Kav-4Z-wg7"/>
+                            <constraint firstAttribute="trailing" secondItem="nNU-an-sfc" secondAttribute="trailing" id="Upk-mL-SZf"/>
+                            <constraint firstItem="xGz-LP-HUm" firstAttribute="top" secondItem="nNU-an-sfc" secondAttribute="bottom" id="Wk0-WC-7P2"/>
+                            <constraint firstItem="nNU-an-sfc" firstAttribute="leading" secondItem="DG8-Cz-Kyx" secondAttribute="leading" id="cfc-bN-wdp"/>
+                            <constraint firstItem="xGz-LP-HUm" firstAttribute="leading" secondItem="DG8-Cz-Kyx" secondAttribute="leading" id="qhD-W9-GYT"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="DG8-Cz-Kyx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Il-GM-w6b"/>
-                <constraint firstAttribute="trailing" secondItem="DG8-Cz-Kyx" secondAttribute="trailing" id="9bB-I4-QWA"/>
-                <constraint firstAttribute="bottom" secondItem="DG8-Cz-Kyx" secondAttribute="bottom" id="NLR-Ve-sfN"/>
-                <constraint firstItem="DG8-Cz-Kyx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lOC-Zt-nsJ"/>
+                <constraint firstAttribute="bottom" secondItem="DG8-Cz-Kyx" secondAttribute="bottom" id="LSz-nQ-IXl"/>
+                <constraint firstItem="DG8-Cz-Kyx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eJo-0b-rx7"/>
+                <constraint firstAttribute="trailing" secondItem="DG8-Cz-Kyx" secondAttribute="trailing" id="k42-87-l1c"/>
+                <constraint firstItem="DG8-Cz-Kyx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uWO-4l-XO5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="207" height="234"/>
+            <size key="customSize" width="214" height="260"/>
             <connections>
                 <outlet property="albumImageView" destination="nNU-an-sfc" id="s54-PI-ZUC"/>
                 <outlet property="albumNameLabel" destination="GBA-rr-xt2" id="izq-9r-OXW"/>
+                <outlet property="amountOfImages" destination="p4G-1g-uuK" id="XXV-b5-JXt"/>
             </connections>
-            <point key="canvasLocation" x="193.47826086956522" y="186.16071428571428"/>
+            <point key="canvasLocation" x="18.840579710144929" y="189.50892857142856"/>
         </collectionViewCell>
     </objects>
 </document>
