@@ -15,11 +15,22 @@ class LocalDataManager {
         return albums
     }
     
+//    func getAlbum(by UUID: UUID) -> Album {
+//
+//        let fetchRequest = NSFetchRequest<Album>(entityName: "Album")
+//        let predicate = NSPredicate(format: "id = '\(UUID)'", argumentArray: nil)
+//        fetchRequest.predicate = predicate
+//        guard let albums = try? context.fetch(fetchRequest).first else { fatalError("Couldn't func album by id") }
+//        return albums
+//    }
+    
     func addAlbum(name: String) -> Album {
         
         let album = Album(context: self.context)
+        album.id = UUID().uuidString
         album.name = name
-        album.imageData = UIImage(named: "album_default")?.pngData()
+        album.coverImage = UIImage(named: "album_default")
+        
         self.saveContext()
         
         return album
@@ -28,42 +39,90 @@ class LocalDataManager {
     func addAlbum(name: String, image: UIImage) -> Album {
         
         let album = Album(context: self.context)
+        album.id = UUID().uuidString
         album.name = name
-        album.imageData = image.pngData()
+        album.coverImage = image
         self.saveContext()
         
         return album
     }
     
     func deleteAlbum(album: Album) {
-//        if let _ = album.image {
-//            album.removeFromImage(album.image!)
-//        }
         context.delete(album)
-        try! context.save()
+        saveContext()
     }
     
     //MARK: - Image
     
     func getAllImages() -> [Image] {
-        return []
+        
+        let fetchRequest = NSFetchRequest<Image>(entityName: "Image")
+        guard let images = try? context.fetch(fetchRequest) else { return [] }
+        return images
     }
     
     func addImage(to album: Album, image: UIImage) -> Image {
         
         let imageToAdd = Image(context: context)
-        imageToAdd.imageData = image.pngData()
-        album.addToImage(imageToAdd)
-        //imageToAdd.album = album
+        imageToAdd.id = UUID().uuidString
+        imageToAdd.image = image
+        
+        let albumImages = album.mutableSetValue(forKey: #keyPath(Album.image))
+        albumImages.add(imageToAdd)
+        
         saveContext()
         
         return imageToAdd
     }
     
+    func isImageContainsTag(image: Image, tagTitle: String) -> Bool {
+        
+        guard let tags = image.tag?.allObjects as? [Tag] else { fatalError() }
+        for tag in tags {
+            if tag.text! == tagTitle { return true }
+        }
+        return false
+    }
+    
+    func deleteImage(image: Image) {
+        
+        if let imageTags = image.tag {
+            image.removeFromTag(imageTags)
+        }
+        context.delete(image)
+        saveContext()
+    }
+    
     //MARK: - Tag
     
     func getAllTags() -> [Tag] {
-        return []
+        let fetchRequest = NSFetchRequest<Tag>(entityName: "Tag")
+        guard let tags = try? context.fetch(fetchRequest) else { return [] }
+        return tags
+    }
+    
+    func addTag(to image: Image, tag: String) {
+        
+        let tagToAdd = Tag(context: context)
+        tagToAdd.id = UUID().uuidString
+        tagToAdd.text = tag
+        
+        let imageTags = image.mutableSetValue(forKey: #keyPath(Image.tag))
+        imageTags.add(tagToAdd)
+
+        saveContext()
+    }
+    
+    func deleteTag(from image: Image, tagTitle: String) {
+        
+        let imageTags = image.tag?.allObjects as! [Tag]
+        let tagToDelete = imageTags.first(where: { $0.text! == tagTitle } )
+        
+        let imageTagsSet = image.mutableSetValue(forKey: #keyPath(Image.tag))
+
+        imageTagsSet.remove(tagToDelete!)
+        
+        saveContext()
     }
     
     //MARK: - Core Data stack

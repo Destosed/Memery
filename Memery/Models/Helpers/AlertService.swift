@@ -11,19 +11,43 @@ class AlertService {
         vc.present(alertController, animated: true)
     }
     
-    static func showOptionsAlert(on vc: UIViewController, for album: Album) {
+    static func showOptionsAlert(on vc: AlbumViewController, for album: Album) {
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "Delete Album", style: .destructive) { _ in
-            
-            print("1 _ Current amount of albums = \(LocalDataManager.shared.getAllAlbums().count)")
             LocalDataManager.shared.deleteAlbum(album: album)
-            print("2 _ Current amount of albums = \(LocalDataManager.shared.getAllAlbums().count)")
             vc.navigationController?.popViewController(animated: true)
         }
-        alertController.addAction(cancelAction)
+        let addImageAction = UIAlertAction(title: "Add image", style: .default) { _ in
+            vc.present(vc.imagePickerController, animated: true)
+        }
+        
+        alertController.addAction(addImageAction)
         alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        vc.present(alertController, animated: true)
+    }
+    
+    static func showOptionsAlert(on vc: ImageViewController, for image: Image) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete Image", style: .destructive) { _ in
+            LocalDataManager.shared.deleteImage(image: image)
+            vc.navigationController?.popViewController(animated: true)
+        }
+        let shareAction = UIAlertAction(title: "Share", style: .default) { _ in
+            //TODO: 
+        }
+        
+        alertController.addAction(shareAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
         vc.present(alertController, animated: true)
     }
 }

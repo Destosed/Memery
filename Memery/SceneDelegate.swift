@@ -6,6 +6,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        let dm = LocalDataManager.shared
+        print("------------------------------")
+        print("Альбомов в БД: \(dm.getAllAlbums().count)")
+        print("Изображений в БД: \(dm.getAllImages().count)")
+        print("Тегов в БД: \(dm.getAllTags().count)")
+        print("------------------------------")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
