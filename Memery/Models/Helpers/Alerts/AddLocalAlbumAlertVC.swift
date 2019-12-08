@@ -2,6 +2,11 @@ import UIKit
 
 class AddLocalAlbumAlertVC: UIViewController {
     
+    //MARK: - Properties
+    
+    var imagePickerController = UIImagePickerController()
+    weak var ownerVC: LocalViewController!
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var alertView: UIView!
@@ -17,7 +22,24 @@ class AddLocalAlbumAlertVC: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        //Creating and adding album
+        
+        //Check if album name allready exist
+        //Check some textField validation
+        //Successfully add this crap
+        
+        if let albumName = textField.text, !albumName.isEmpty {
+            
+            guard !LocalDataManager.shared.isAlbumAllreadyExist(name: albumName) else {
+                AlertService.showInfoAlert(on: self, title: "Error", message: "The album with same name allready exist")
+                return
+            }
+            LocalDataManager.shared.addAlbum(name: albumName, image: coverImageView.image!)
+            dismiss(animated: true) {
+                self.ownerVC.fetchData()
+            }
+        } else {
+            return
+        }
     }
     
     //MARK: - Life Circle
@@ -26,6 +48,8 @@ class AddLocalAlbumAlertVC: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        setupImagePicker()
+        textField.delegate = self
     }
     
     //MARK: - Setups
@@ -45,8 +69,38 @@ class AddLocalAlbumAlertVC: UIViewController {
     }
     
     @objc func coverImageViewWasTapped() {
+        present(imagePickerController, animated: true, completion: nil)
+    }
+}
+
+//MARK: - Image Picker
+
+extension AddLocalAlbumAlertVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func setupImagePicker() {
         
-        //Image picker controller
-        print("coverImageView was tapped")
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.allowsEditing = true
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            coverImageView.image = image
+        }
+        else {
+            fatalError()
+        }
+        imagePickerController.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AddLocalAlbumAlertVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }

@@ -94,6 +94,7 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
 }
 
 //MARK: - Image Picker
+
 extension AlbumViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func setupImagePicker() {

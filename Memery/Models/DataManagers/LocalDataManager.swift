@@ -15,6 +15,16 @@ class LocalDataManager {
         return albums
     }
     
+    func isAlbumAllreadyExist(name: String) -> Bool {
+        
+        let fetchRequest = NSFetchRequest<Album>(entityName: "Album")
+        let predicate = NSPredicate(format: "name = '\(name)'", argumentArray: nil)
+        fetchRequest.predicate = predicate
+        guard let albums = try? context.fetch(fetchRequest) else { fatalError() }
+        
+        if albums.isEmpty { return false } else { return true }
+    }
+    
 //    func getAlbum(by UUID: UUID) -> Album {
 //
 //        let fetchRequest = NSFetchRequest<Album>(entityName: "Album")
