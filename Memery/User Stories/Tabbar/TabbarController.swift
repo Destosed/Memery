@@ -50,7 +50,7 @@ class TabbarController: UITabBarController, UITabBarControllerDelegate {
     func setupControllers() {
         
         let localScreenStoryboard = UIStoryboard(name: "LocalScreen", bundle: nil)
-        let localVC = localScreenStoryboard.instantiateInitialViewController() as! LocalViewController
+        let localVC = localScreenStoryboard.instantiateInitialViewController() as! UINavigationController
         let localIcon = UIImage(named: "localIcon")
         let localIcon2x = UIImage(named: "localIcon2x")
         let localTabbarItem = UITabBarItem(title: "", image: localIcon, selectedImage: localIcon2x)
