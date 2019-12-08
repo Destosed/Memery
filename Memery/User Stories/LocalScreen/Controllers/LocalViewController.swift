@@ -14,21 +14,25 @@ class LocalViewController: UIViewController {
     
     @IBAction func addAlbumButtonPressed(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Add album", message: nil, preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.placeholder = "Type album's name..."
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { alertAction in
-            
-            guard let albumName = alert.textFields?.first?.text else { return }
-            let newAlbum = LocalDataManager.shared.addAlbum(name: albumName)
-            self.albums.append(newAlbum)
-            self.collectionView.reloadData()
-        }
-        alert.addAction(cancelAction)
-        alert.addAction(okAction)
-        self.present(alert, animated: true)
+        let storyboard = UIStoryboard(name: "Alert", bundle: nil)
+        let addLocalAlbumAlertVC = storyboard.instantiateViewController(identifier: "AddLocalAlbumAlertVC")
+        present(addLocalAlbumAlertVC, animated: true, completion: nil)
+        
+//        let alert = UIAlertController(title: "Add album", message: nil, preferredStyle: .alert)
+//        alert.addTextField { textField in
+//            textField.placeholder = "Type album's name..."
+//        }
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        let okAction = UIAlertAction(title: "Ok", style: .default) { alertAction in
+//
+//            guard let albumName = alert.textFields?.first?.text else { return }
+//            let newAlbum = LocalDataManager.shared.addAlbum(name: albumName)
+//            self.albums.append(newAlbum)
+//            self.collectionView.reloadData()
+//        }
+//        alert.addAction(cancelAction)
+//        alert.addAction(okAction)
+//        self.present(alert, animated: true)
     }
     
     //MARK: - Life Circle
